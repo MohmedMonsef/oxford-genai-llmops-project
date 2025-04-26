@@ -1,0 +1,16 @@
+name: CI Initialise
+
+on:
+    push:
+      branches:
+        - '**'  # triggers on push to any branch
+
+jobs:
+    initialise:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Print CI message
+              run: echo "CI step initialising" 
+
+            
