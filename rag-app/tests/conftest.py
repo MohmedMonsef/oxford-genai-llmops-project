@@ -1,6 +1,5 @@
 import pytest
-from server.src.services.generation_service import generate_response
-from unittest.mock import patch, Mock
+from unittest.mock import patch
 
 
 @pytest.fixture
