@@ -35,6 +35,11 @@ pre-commit = "^4.0.1"
 pythonpath = [
   "."
 ]
+filterwarnings = [
+  "ignore::DeprecationWarning",
+  "ignore::PendingDeprecationWarning",
+  "ignore::Warning"
+]
 
 [build-system]
 requires = ["poetry-core"]
