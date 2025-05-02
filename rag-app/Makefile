@@ -24,7 +24,14 @@ run-client:
 
 # Build the postgres db - don't run inside the devctontainer ... TODO: build logic to check if I'm in devcontainer.
 build-db:
-	 docker compose --env-file .env -f deploy/docker/postgres/docker-compose.yaml up --build
+	docker compose --env-file .env -f deploy/docker/postgres/docker-compose.yaml up --build
+
+# Does not work, copy commands to the terminal (outside dev container) and it will work
+inspect-db:
+	bash -c "source .env" && \
+	psql -h localhost -U $POSTGRES_USER -d $POSTGRES_DB -p $POSTGRES_PORT
+	\dt
+	SELECT count(*) FROM public.papers;
 
 # Bring down the postgres db and then remove the config data.
 remove-db:

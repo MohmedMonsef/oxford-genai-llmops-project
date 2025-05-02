@@ -93,9 +93,9 @@ def fetch_papers_paginated(
 if __name__ == "__main__":
     # papers = fetch_papers(query="ti:perovskite", max_results=10)
     papers = fetch_papers_paginated(
-        query="ti:perovskite", max_results=20, results_per_page=5, wait_time=5
+        query="ti:llm", max_results=20, results_per_page=5, wait_time=5 # perovskite
     )
-    print(papers)
+    print(f"Downloaded {len(papers)} papers")
     # This duplicates the save_local option in the function ... TODO: tidy this up and test thoroughly.
     # with open("papers.json", "w") as f:
     #     json.dump(papers, f)
