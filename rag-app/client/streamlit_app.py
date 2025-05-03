@@ -46,7 +46,7 @@ if query:
     if "error" in response:
         answer = f"⚠️ Error: {response['error']}"
     else:
-        answer = response.get("answer", "No response from server.")
+        answer = response.get("response", "No response from server.")
 
     # Display bot response
     with st.chat_message("assistant"):
