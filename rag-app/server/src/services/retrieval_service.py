@@ -11,6 +11,7 @@ import opik
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
+@opik.track
 def get_db_connection(db_config: dict):
     """
     Establishes a connection to the Postgres database.
